@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+}
+
+.navbar-logo {
+    flex: 1;
+}
+
+.navbar-logo img {
+    height: 40px; /* Adjust the height as needed */
+}
+
+.navbar-options {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-options a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons i {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-logo,
+    .navbar-options,
+    .navbar-icons {
+        width: 100%;
+    }
+
+    .navbar-options {
+        margin-top: 10px;
+    }
+
+    .navbar-options a,
+    .navbar-icons i {
+        margin: 10px;
+    }
+}
+
+.navbar a:hover {
+    
+    text-decoration: none;
+    color: rgba(171, 13, 13, 0.082);
+    
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+}
+
+.flex-container
+{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+.flex-container1 {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
+.description,
+  .description1
+   {
+    flex: 1;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    position: relative;
+    padding-top: 250px;
+    
+}
+
+.image-container,
+.image-container1{
+    max-width: 60%;
+    margin: auto;
+    
+}
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-location {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social i {
+    font-size: 24px;
+    margin: 0 10px;
+    color: white;
+}
+
+.footer-about {
+    text-align: left;
+}
+
+.footer-about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
