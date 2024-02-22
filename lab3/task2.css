@@ -1,0 +1,20 @@
+.back{
+    background-color: rgb(97, 96, 96);
+    border-radius: 5px;
+    padding-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 20px;
+}
+
+.Excercise{
+    background-color: green;
+    padding: 12px 12px 12px 12px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+
