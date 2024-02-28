@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In/ Sign UP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        .container {
+            height: 800px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form action="">
+            <div class="form-group">
+                <input id="email" type="email" required placeholder="">
+                <label for="">Email</label>
+                <i class="fa fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <input id="user" type="text" required placeholder="">
+                <label for="">Username</label>
+                <i style="font-size: 24px;" class="fa fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input id="pass" type="password" required placeholder="">
+                <label for="">Password</label>
+                <i style="font-size: 24px;" class="fa fa-key"></i>
+            </div>
+            <div class="form-group">
+                <input id="phone" type="text" required placeholder="">
+                <label for="">Phone Number</label>
+                <i style="font-size: 24px;" class="fa fa-phone"></i>
+            </div>
+            <div class="form-group">
+                <input id="birth" type="date" required placeholder="">
+                <label for="">Birthdate</label>
+                <i style="font-size: 24px;" class="fa fa-calendar"></i>
+            </div>
+            <div class="form-group">
+                <input id="zip" type="text" required placeholder="">
+                <label for="">Zip Code</label>
+                <i style="font-size: 24px;" class='fa fa-lock'></i>
+            </div>
+            <div class="form-group">
+                <input id="gender" type="text" required placeholder="">
+                <label for="">Gender</label>
+                <i style="font-size: 24px;" class="fa fa-male"></i>
+                <i style="font-size: 24px; padding: 0 20px;" class="fa fa-female"></i>
+            </div>
+            <input onclick="check()" id="btn" type="button" value="Sign Up">
+            <p style="padding: 0; color: red; position: absolute; top: 795px; left: 0; right: 0;" id="error"></p>
+        </form>
+    </div>
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
