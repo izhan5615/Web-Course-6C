@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+    <!-- Linking to Google Fonts for styling -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+    <!-- Linking to jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Linking to external JavaScript file -->
+    <script src="script.js"></script>
+
+    <!-- Setting the title of the webpage -->
+    <title>Rock, Paper Scissors Game</title>
+
+    <!-- Styling for the HTML -->
+    <style>
+        /* Resetting default margin, padding, and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the body */
+        body {
+            height: 100vh; 
+            display: flex; 
+            align-items: center;
+            justify-content: center; 
+            background-color: rgba(99, 13, 164, 0.973); 
+            flex-direction: column; 
+            row-gap: 15px; 
+        }
+
+        /* Styling for the main container */
+        .container {
+            padding: 3rem 6rem; 
+            border-radius: 15px; 
+            background-color: whitesmoke; 
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.313); /* Box shadow for depth */
+        }
+
+        /* Animation styles for user result */
+        .container.start .user_result{
+            animation: userShake 0.7s ease infinite;
+        }
+
+        /* Animation styles for CPU result */
+        .container.start .cpu_result{
+            animation: cpuShake 0.7s ease infinite;
+        }
+
+        /* Keyframe animation for user shaking */
+        @keyframes userShake {
+            60% {
+                transform: translateY(15px); /* Moving down */
+            }
+        }
+
+        /* Keyframe animation for CPU shaking */
+        @keyframes cpuShake {
+            60% {
+                transform: translateY(-15px); /* Moving up */
+            }
+        }
+
+        /* Styling for result images container */
+        .result_images{
+            display: flex; /* Flex display for alignment */
+            column-gap: 7rem; /* Spacing between columns */
+        }
+
+        /* Styling for result images */
+        .result_images img {
+            width: 100px; 
+        }
+
+        /* Styling for user result */
+        .user_result img {
+            transform: rotate(80deg); 
+        }
+
+        /* Styling for CPU result */
+        .cpu_result img {
+            transform: rotate(-80deg) rotateY(180deg); 
+        }
+
+        /* Styling for result text */
+        .result {
+            text-align: center;
+            font-size: 2rem; 
+            color: rgb(164, 31, 84); 
+        }
+
+        /* Styling for option images container */
+        .option_images {
+            display: flex; 
+            align-items: center; 
+            margin-top: 2.5rem; 
+            justify-content: space-around; 
+        }
+
+        /* Hover effect for option images */
+        .option_image:hover {
+            opacity: 1; 
+        }
+
+        /* Styling for active option image */
+        .option_image.active {
+            opacity: 1; 
+        }
+
+        /* Disabling option images when game starts */
+        .container.start .option_images {
+            pointer-events: none; 
+        }
+        .option_image {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            opacity: 0.5; 
+            cursor: pointer; 
+            transition: opacity 0.3s ease; /* Transition effect */
+        }
+
+        /* Styling for option image */
+        .option_image img {
+            pointer-events: none; /* Disabling pointer events for image */
+        }
+
+        /* Styling for option text */
+        .option_image p {
+            color: rgb(207, 27, 54); 
+            font-size: 1.3rem; 
+            margin-top: 1rem; 
+        }
+
+        /* Styling for score container */
+        .score {
+            display: flex; 
+            column-gap: 380px; 
+            color: rgb(255, 252, 252); 
+            font-size: 20px;
+            font-weight: bold; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Score section -->
+    <div class="score">
+        <p>User <span id="u">: 0</span></p> <!-- User score -->
+        <p>CPU <span id="c">: 0</span></p> <!-- CPU score -->
+    </div>
+
+    <!-- Main game section -->
+    <section class="container">
+        <div class="result_field">
+
+            <!-- Result images -->
+            <div class="result_images">
+                <span class="user_result">
+                    <img src="rock.png" alt=""> <!-- User result image -->
+                </span>
+                <span class="cpu_result">
+                    <img src="rock.png" alt=""> <!-- CPU result image -->
+                </span>
+            </div>
+
+            <!-- Result text -->
+            <div class="result">Let's embark on a game!!</div>
+        </div>
+
+        <!-- Options to choose from -->
+        <div class="option_images">
+            <span class="option_image">
+                <img src="rock.png" alt=""> <!-- Rock option -->
+                <p>Rock</p>
+            </span>
+            <span class="option_image">
+                <img src="scissors.png" alt=""> <!-- Scissors option -->
+                <p>Scissor</p>
+            </span>
+            <span class="option_image">
+                <img src="paper.png" alt=""> <!-- Paper option -->
+                <p>Paper</p>
+            </span>
+        </div>
+    </section>
+</body>
+</html>
